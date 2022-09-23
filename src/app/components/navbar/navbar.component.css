@@ -1,0 +1,8 @@
+#upNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#log{
+  margin-right: 10px;
+}

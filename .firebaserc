@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-project-roei": {
+      "hosting": {
+        "Angular_project_1": [
+          "angular-project-roei"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-project-roei"
+  }
+}

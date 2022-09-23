@@ -1,0 +1,16 @@
+<div id="upNav">
+  <div class="bg-white text-dark p-3">
+    <h3 id="crm-company">company crm</h3>
+  </div>
+  <div id="log">
+    <ng-container *ngIf="checkLoggedIn()">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>{{ getUsername() }}</option>
+      
+      </select>  <button type="button" value="1" (click)="logout()">
+          <a>logout</a>
+        </button>
+    </ng-container>
+  </div>
+</div>
+<hr id="line" />

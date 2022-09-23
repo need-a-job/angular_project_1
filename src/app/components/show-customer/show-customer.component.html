@@ -1,0 +1,45 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First name</th>
+      <th>last name</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>adress</th>
+      <th>notes</th>
+      <th>edit</th>
+      <th>delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="k" *ngFor="let users of user; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ users.firstName }}</td>
+      <td>{{ users.lastName }}</td>
+      <td>{{ users.email }}</td>
+      <td>{{ users.phone }}</td>
+      <td>{{ users.adress }}</td>
+      <td>{{ users.notes }}</td>
+      <td>
+        <i
+          class="fa-solid fa-pen-to-square text-success"
+          [routerLink]="['/editUser', users.id ]"
+        ></i>
+      </td>
+
+      <td>
+        <i
+          class="fa-solid fa-pen-to-square text-success"
+          (click)="updateUser(users)"
+        ></i>
+      </td>
+      <td>
+        <i
+          class="fa-solid fa-trash text-danger"
+          (click)="deleteUser(users)"
+        ></i>
+      </td>
+    </tr>
+  </tbody>
+</table>

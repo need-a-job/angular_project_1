@@ -1,0 +1,78 @@
+<div class="container p-4">
+    <h3 id="headline-1">Customer details</h3>
+    <form #customerForm="ngForm" id="form">
+      <div class="form-group">
+        <label for="firstName">First name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="first_name"
+          [(ngModel)]="user.firstName"
+          #firstName="ngModel"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="last_name"
+          [(ngModel)]="user.lastName"
+          #lastName="ngModel"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input
+          type="number"
+          class="form-control"
+          id="phone"
+          [(ngModel)]="user.phone"
+          #phone="ngModel"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          [(ngModel)]="user.email"
+          #email="ngModel"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="adress">adress</label>
+        <input
+          type="text"
+          class="form-control"
+          id="adress"
+          [(ngModel)]="user.adress"
+          #adress="ngModel"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <input
+          type="text"
+          class="form-control"
+          id="notes"
+          [(ngModel)]="user.notes"
+          #notes="ngModel"
+          [ngModelOptions]="{ standalone: true }"
+          required
+        />
+      </div>
+    </form>
+  </div>
+  

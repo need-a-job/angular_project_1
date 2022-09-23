@@ -1,0 +1,78 @@
+<div>
+  <h3 id="headline-1">add new customer</h3>
+  <form #customerForm="ngForm" id="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First name:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="first_name"
+        [(ngModel)]="customer.firstName"
+        #firstName="ngModel"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="last_name"
+        [(ngModel)]="customer.lastName"
+        #lastName="ngModel"
+        [ngModelOptions]="{standalone: true}"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input
+        type="number"
+        class="form-control"
+        id="phone"
+        [(ngModel)]="customer.phone"
+        #phone="ngModel"
+        [ngModelOptions]="{standalone: true}"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        [(ngModel)]="customer.email"
+        #email="ngModel"
+        [ngModelOptions]="{standalone: true}"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="adress">adress</label>
+      <input
+        type="text"
+        class="form-control"
+        id="adress"
+        [(ngModel)]="customer.adress"
+        #adress="ngModel"
+        [ngModelOptions]="{standalone: true}"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <input
+        type="text"
+        class="form-control"
+        id="notes"
+        [(ngModel)]="customer.notes"
+        #notes="ngModel"
+        [ngModelOptions]="{standalone: true}"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-success mt-3">add customer</button>
+  </form>
+</div>
